@@ -75,13 +75,17 @@ Stack<T>::~Stack(void)
 
 int main()
 {
+	Stack<int>* Stack1 = new Stack<int>;
 	try
 	{
-		Stack<int> Stack1;
-		Stack1.push(5);
-		Stack1.push(9);
-		cout << "Value 1: " << Stack1.pop() << endl;
-		cout << "Value 2: " << Stack1.pop() << endl;
+		for (int x = 0; x < 10; x++)
+		{
+			Stack1->push(x);
+		}
+		while (true)
+		{
+			cout << Stack1->pop() << " ";
+		}
 	}
 	catch (char* errorMessage)
 	{
@@ -91,6 +95,6 @@ int main()
 	{
 		cout << "There has been an unexpected error" << endl;
 	}
-	
+	delete Stack1;
 	return 0;
 }
