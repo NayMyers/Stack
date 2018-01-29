@@ -25,7 +25,10 @@ public:
 	int size(void);
 
 };
-
+int Stack::size() 
+{
+	return count;
+}
 Node* Stack::nodePop(void) //Switches Ptop to the next value in the chain and makes pTmp equal to the top of the chain.
 {
 	Node* pTmp = pTop; //creates a new pointer of type Node and makes it point to the same address as Ptop. This means pTmp is now 
@@ -41,7 +44,7 @@ int Stack::pop(void)
 		throw "Stack Empty!";
 	}
 
-	Node* pTmp = nodePop(); // makes pTmp equal to the top of the chain and moves pTop to the next node along. 
+	Node* pTmp = nodePop(); // makes pTmp equal to the top of the chain and makes pTop point to the next node along. 
 	int returnVal; // makes value to store value of node in
 
 	if (pTmp != nullptr) // if there are still nodes left, return the value.
