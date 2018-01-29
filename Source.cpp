@@ -44,7 +44,7 @@ int Stack::pop(void)
 	Node* pTmp = nodePop(); // makes pTmp equal to the top of the chain and moves pTop to the next node along. 
 	int returnVal; // makes value to store value of node in
 
-	if (pTmp != nullptr)
+	if (pTmp != nullptr) // if there are still nodes left, return the value.
 	{
 		returnVal = pTmp->value;
 	}
